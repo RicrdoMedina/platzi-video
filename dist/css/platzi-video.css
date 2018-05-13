@@ -1,0 +1,1 @@
+body{margin:0;padding:0;border:0}.wrapper{height:100vh;width:100%;display:grid;grid-template:1fr/250px 1fr;grid-template-areas:"left-sidebar" "main";border:1px solid red}.wrapper .left-sidebar{grid-area:left-sidebar;background:orange;height:800px;border:1px solid red}.wrapper .main{grid-area:main;background:blue;height:800px;border:1px solid red}

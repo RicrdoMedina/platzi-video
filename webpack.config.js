@@ -17,7 +17,7 @@ module.exports = (env) => {
   return {
 
     entry: {
-      'platzi-video': path.resolve(__dirname, 'index.js'),
+      'platzi-video': path.resolve(__dirname, './src/js/index.js'),
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -43,17 +43,23 @@ module.exports = (env) => {
           },
         },
         {
-          test: /\.css$/,
+          test:/\.css$/,
+          //Indicamos los loaders que se van a extraer
           use: ExtractTextPlugin.extract({
-            use: [
+            use:[
+              // Agregar configuraciones para css
+              // Para hacerlos compatible con postcss
+              // Mudules: Permita importar modulos
+              // importLoaders: 1 le decimos que trabaje con un solo loaders en este caso postcss-loader
               {
-                loader: 'css-loader',
+                loader:'css-loader',
                 options: {
-                  minimize: true,
+                  minimize: true
                 }
-              }
+              },
+              'postcss-loader'
             ]
-          })
+          }),
         },
         {
           test: /\.(jpg|png|gif|svg)$/,

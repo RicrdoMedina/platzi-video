@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'platzi-video': path.resolve(__dirname, 'index.js'),
+    'platzi-video': path.resolve(__dirname, './src/js/index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use:['style-loader', 'css-loader','postcss-loader'] // Style loader agregara el css en el head
       },
       {
         test: /\.(jpg|png|gif|svg)$/,
