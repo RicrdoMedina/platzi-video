@@ -18,12 +18,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [path.resolve(__dirname, './src')]
-      },
-      {
         // test: que tipo de archivo quiero reconocer,
         // use: que loader se va a encargar del archivo
         test: /\.(js|jsx)$/,
