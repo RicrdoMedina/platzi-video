@@ -1,2 +1,2 @@
-# platzi-videos
-Web site de visualizacion de peliculas online
+# platzi-video
+Curso de desarrollo front-end con react js
