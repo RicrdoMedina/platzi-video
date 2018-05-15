@@ -3,11 +3,11 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'platzi-video': path.resolve(__dirname, './src/js/index.js'),
+    'home': path.resolve(__dirname, 'src/entries/home.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js'
+    filename: 'js/bundle.js'
   },
   devServer: {
     port: 9000,

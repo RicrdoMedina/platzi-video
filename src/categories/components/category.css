@@ -1,0 +1,31 @@
+.content-categories{
+  margin-top: 60px;
+  display: grid;
+  grid-template: 280px 280px 280px / 100%;
+  grid-template-areas: "category-1" "category-2" "category-3";
+  padding: 0 10px;
+}
+
+.row-category-1{
+  grid-area: category-1;
+}
+.row-category-2{
+  grid-area: category-2;
+}
+.row-category-3{
+  grid-area: category-3;
+}
+.row-container-category{
+  & .title-category{
+    color: #ccc;
+    margin: 0;
+  }
+}
+.wrapper-subcategory{
+  width: 100%;
+
+  & .title-subcategory{
+    color: #8c8484;
+    margin: 10px 0;
+  }
+}

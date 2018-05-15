@@ -1,0 +1,15 @@
+.title-main {
+  font-size: 20px;
+
+  & h1{
+    color: #fff;
+  }
+
+  & span{
+    position: relative;
+    left: -8px;
+    background: linear-gradient( to left, #e66599, #ff243b );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
