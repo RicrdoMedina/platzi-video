@@ -1,5 +1,7 @@
 import React from 'react'
 import Category from './category.jsx'
+import TopFixedCategories from '../../widgets/components/top-fixed-categories.jsx'
+import Search from '../../widgets/containers/search-container.jsx'
 
 function Categories (props) {
   console.log('category')
@@ -7,6 +9,9 @@ function Categories (props) {
   return (
     <div className="Categories">
       <div className="content-categories">
+        <TopFixedCategories>
+          <Search />
+        </TopFixedCategories>
         {
           props.categories.map((item) => {
             return (

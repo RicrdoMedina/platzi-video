@@ -1,0 +1,21 @@
+.Search{
+  background: #efecec70;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px 0 0;
+
+  & .Search-input{
+    background: transparent;
+    border: none;
+    width: 280px;
+    height: 24px;
+    outline: 0;
+    border-radius: 10px;
+    padding: 0 0 0 4px;
+  }
+}

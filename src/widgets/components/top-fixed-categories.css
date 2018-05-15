@@ -1,0 +1,12 @@
+.top-fixed-categories{
+  position: fixed;
+  display: flex;
+  width: 73vw;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  top: 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
