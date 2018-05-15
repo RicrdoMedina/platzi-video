@@ -1,5 +1,5 @@
 import React from 'react'
-import Category from './category'
+import Category from './category.jsx'
 
 function Categories (props) {
   console.log('category')
@@ -9,7 +9,13 @@ function Categories (props) {
       <div className="content-categories">
         {
           props.categories.map((item) => {
-            return <Category key={ item.id } { ...item }/>
+            return (
+              <Category
+                key={ item.id }
+                { ...item }
+                handleOpenModal = { props.handleOpenModal }
+              />
+            )
           })
         }
       </div>

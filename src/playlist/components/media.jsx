@@ -21,7 +21,7 @@ class Media extends Component {
   render() {
     //const { title, author, image } = this.props
     return (
-      <div className="Media" onClick={this.handleClick}>
+      <div className="Media" onClick={ this.props.handleClick }>
         <div className="Media-cover">
           <img
             src={ this.props.cover }

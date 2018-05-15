@@ -1,5 +1,5 @@
 import React from 'react'
-import Playlist from '../../playlist/components/playlist'
+import Playlist from '../../playlist/components/playlist.jsx'
 import './category.css'
 
 function Category (props) {
@@ -13,7 +13,10 @@ function Category (props) {
         <h3 className="title-category">{ title }</h3>
         <div className="wrapper-subcategory">
           <h4 className="title-subcategory"> { description } </h4>
-          <Playlist playlists = { playlist }/>
+          <Playlist
+            handleOpenModal = { props.handleOpenModal }
+            playlists = { playlist }
+          />
         </div>
       </div>
     </div>

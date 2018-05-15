@@ -16,7 +16,7 @@
   & .Categories{
     grid-area: categories;
     background: #fff;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 }
