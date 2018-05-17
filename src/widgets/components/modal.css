@@ -23,6 +23,7 @@
   background: #171c30;
   color: white;
   cursor: pointer;
+  outline: 0;
 }
 
 .Modal-close:after {

@@ -14,7 +14,7 @@ module.exports = {
     hot: true, // Para usar el HotModuleReplacement agregar el src que apunte al server <script src="http://localhost:8080/js/bundle.js"></script>
     open: true
   },
-  //devtool: 'eval-source-map',
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {

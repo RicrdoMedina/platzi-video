@@ -6,12 +6,12 @@
   text-align: left;
   margin-right: 20px;
   cursor: pointer;
-  background: red;
 
   & .Media-cover{
     background: #ccc;
     height: 140px;
     width: 100%;
+    box-shadow: 1px -1px 8px #000000;
   }
 
   & .Media-image{
@@ -29,9 +29,12 @@
 
   & .Media-title{
     margin: 5px 0;
+    color: #3F51B5;
   }
 
   & .Media-autor{
     margin: 0;
+    color: #607D8B;
+    font-weight: bold;
   }
 }

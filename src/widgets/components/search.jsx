@@ -8,7 +8,6 @@ const Search = (props) => (
       type="text"
       className="Search-input"
       placeholder="Busca tu video favorito"
-      defaultValue = ""
       name="search"
       onChange={ props.handleChange }
       value={ props.value }
