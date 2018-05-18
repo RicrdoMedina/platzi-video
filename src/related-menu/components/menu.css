@@ -1,0 +1,23 @@
+.Menu{
+  margin: 20px 15px 20px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px 10px 10px 0;
+  color: #fff;
+  font-size: 14px;
+
+  & .item{
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  & .item:hover{
+    background-color: rgba( 0 , 0, 0, .5 );
+    border-radius: 5px;
+  }
+
+  & .icon{
+    margin-right: 6px;
+  }
+}

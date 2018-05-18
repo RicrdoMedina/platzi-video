@@ -1,0 +1,10 @@
+.Account{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  & .username{
+    margin-left: 5px;
+  }
+}

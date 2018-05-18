@@ -23,7 +23,7 @@
   & .Media-description{
     padding: 5px;
     width: 100%;
-    font-size: 14px;
+    font-size: 12px;
     box-sizing: border-box;
   }
 
@@ -36,5 +36,6 @@
     margin: 0;
     color: #607D8B;
     font-weight: bold;
+    font-size: 12px;
   }
 }

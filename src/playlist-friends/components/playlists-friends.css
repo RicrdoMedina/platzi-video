@@ -1,0 +1,17 @@
+.Playlist.Friends{
+  margin: 0;
+  
+  & .playlist-item{
+    margin: 0;
+  }
+
+  & .playlist-item-link--avatar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  & .avatar{
+    margin-right: 10px;
+  }
+}

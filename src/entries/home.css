@@ -1,0 +1,31 @@
+html, body{
+  height: 100%
+}
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.link{
+  color: #fff;
+}
+
+.u-ul-list-style{
+  list-style: none;
+}
+
+.avatar{
+  border-radius: 50%;
+  border: solid 2px #ccc;
+}
+
+.avatar--size-large{
+  width: 60px;
+  height: 50px;
+}
+.avatar--size-small{
+  width: 35px;
+}

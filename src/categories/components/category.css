@@ -19,7 +19,7 @@
   & .title-category{
     margin: 0;
     color: rgb(232, 46, 89);
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 .wrapper-subcategory{
@@ -28,6 +28,6 @@
   & .title-subcategory{
     color: rgba(21, 27, 49, 0.62);
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 14px;
   }
 }

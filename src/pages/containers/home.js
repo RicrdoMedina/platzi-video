@@ -27,7 +27,10 @@ class Home extends Component {
     return (
       <HandleError>
         <HomeLayout>
-          <Related />
+          <Related
+            myplaylists = { this.props.playlists }
+            friends = { this.props.friends }
+          />
           <Categories 
             categories={ this.props.data.categories }
             handleOpenModal = { this.handleOpenModal }

@@ -1,0 +1,28 @@
+.footer{
+  padding: 10px 0;
+  margin: 0 10px 20px 0;
+  font-size: 12px;
+
+  & .footer-item{
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 8px;
+  }
+
+  & .icon{
+    margin-right: 5px;
+  }
+
+  & .link{
+    text-decoration: none;
+  }
+
+  & .link:hover, & .footer-item:last-child.link{
+    text-decoration: underline;
+  }
+
+  & .footer-item:last-child .link{
+    text-decoration: none;
+    cursor: default;
+  }
+}

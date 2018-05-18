@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "friend": "Gordon Carroll",
+      "avatar": "./images/avatar-1.jpg"
+    },
+    {
+      "id": 2,
+      "friend": "Adeline Wilkins",
+      "avatar": "./images/avatar-2.jpg"
+    },
+    {
+      "id": 3,
+      "friend": "John Wheeler",
+      "avatar": "./images/avatar-3.jpg"
+    },
+    {
+      "id": 4,
+      "friend": "Katherine Nelson",
+      "avatar": "./images/avatar-4.jpg"
+    }
+  ]
+}
+
