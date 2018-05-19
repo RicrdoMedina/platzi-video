@@ -5,7 +5,6 @@ import PlaylistsFriends from '../components/playlists-friends'
 
 class PlaylistFriendsContainer extends Component {
   render () {
-    console.log(this.props.friends.length, 'friends')
     return (
       <PlaylistsFriendsLayout>
         <Title title = "Playlist de Amigos"/>

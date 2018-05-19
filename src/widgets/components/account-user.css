@@ -42,6 +42,10 @@
     font-size: 14px;
   }
 
+  &.open .dropdown-toggle:after{
+    transform: rotate(180deg);
+  }
+
   & .dropdown-menu{
     position: absolute;
     margin-top: 1px;
@@ -54,7 +58,7 @@
     display: none;
   }
 
-  & .dropdown-menu.open{
+  &.open .dropdown-menu{
     display: block;
   }
 
