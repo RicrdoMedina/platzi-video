@@ -8,7 +8,10 @@ class MyPlaylistContainer extends Component {
     return (
       <MyPlaylistLayout>
         <Title title="My Playlist"/>
-        <MyPlaylist myplaylists = { this.props.myplaylists } />
+        <MyPlaylist
+          myplaylists = { this.props.myplaylists }
+          handleOpenModal = { this.props.handleOpenModal }
+        />
       </MyPlaylistLayout>
     )
   }

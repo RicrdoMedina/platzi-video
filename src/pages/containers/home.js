@@ -29,6 +29,7 @@ class Home extends Component {
           <Related
             myplaylists = { this.props.playlists }
             friends = { this.props.friends }
+            handleOpenModal = { this.handleOpenModal }
           />
           <Categories 
             categories={ this.props.data.categories }

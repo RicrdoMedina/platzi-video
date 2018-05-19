@@ -20,7 +20,10 @@ function Related (props) {
           />
         </a>
       </div>
-      <MyPlaylistContainer myplaylists = { props.myplaylists }/>
+      <MyPlaylistContainer
+        myplaylists = { props.myplaylists }
+        handleOpenModal = { props.handleOpenModal }
+      />
       <PlaylistFriendsContainer friends = { props.friends } />
       <MenuContainer />
       <Footer />

@@ -7,7 +7,11 @@ const Playlist = (props) => {
     <ol className = "RelatedPlaylist">
       {
         props.myplaylists.map( (playlist) => {
-          return <PlaylistItem { ...playlist } key = { playlist.id }/>
+          return <PlaylistItem
+                    { ...playlist }
+                    key = { playlist.id }
+                    openModal = { props.handleOpenModal }
+                  />
         })
       }
     </ol>
