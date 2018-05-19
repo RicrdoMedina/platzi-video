@@ -12,7 +12,6 @@ class Home extends Component {
     modalVisible: false
   }
   handleOpenModal = (media) => {
-    console.log(media, 'media')
     this.setState({
       modalVisible: true,
       media

@@ -3,8 +3,6 @@ import Playlist from '../../playlist/components/playlist.jsx'
 import './category.css'
 
 function Category (props) {
-  console.log('category')
-  console.log(props)
   const { id, title, description, playlist } = props
   const classNameCategory = `row row-category-${id}`
   return (

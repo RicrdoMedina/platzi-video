@@ -40,14 +40,12 @@ class VideoPlayer extends Component {
     })
   }
   handleTimeUpdate = event => {
-    //console.log(this.video.currentTime)
     this.setState({
       currentTime: formattedTime(this.video.currentTime),
       timeFloat: this.video.currentTime
     })
   }
   handleProgressChange = event => {
-    console.log(event.target.value)
     this.video.currentTime = event.target.value
   }
   handleSeeking = event => {
@@ -64,7 +62,6 @@ class VideoPlayer extends Component {
     this.video.volume = event.target.value
   }
   handleVolumeToggle = () => {
-    console.log('toggle')
     const lastValue = this.video.volume;
     this.setState ({
       lastValue

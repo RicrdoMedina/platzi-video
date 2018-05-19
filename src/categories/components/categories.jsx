@@ -5,8 +5,6 @@ import Search from '../../widgets/containers/search-container.jsx'
 import Account from '../../widgets/containers/account-container'
 
 function Categories (props) {
-  console.log('category')
-  console.log(props)
   return (
     <div className="Categories">
       <div className="content-categories">

@@ -3,7 +3,6 @@ import Media from './media.jsx'
 import './playlist.css'
 
 function Playlist (props) {
-  console.log(props)
   const { playlists } = props
   return (
     <div className = "Playlist">
