@@ -7,7 +7,7 @@ const Menu = () => (
       <span className = "icon icon--small">
         <i className = "fas fa-cog"></i>
       </span>
-      Configuracion
+      Configuración
     </li>
     <li className = "item">
       <span className = "icon icon--small">

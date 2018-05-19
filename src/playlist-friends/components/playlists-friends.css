@@ -1,8 +1,9 @@
-.Playlist.Friends{
+.RelatedPlaylist.Friends{
   margin: 0;
   
   & .playlist-item{
     margin: 0;
+    list-style: none;
   }
 
   & .playlist-item-link--avatar{

@@ -23,7 +23,7 @@ const Footer = () => (
         <span className="icon">
           <i className="far fa-copyright"></i>
         </span>
-        2018 Platzi - Curso React JS
+        2018 PlatziVideo
       </a>
     </span>
   </footer>

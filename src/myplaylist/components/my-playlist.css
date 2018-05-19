@@ -10,6 +10,7 @@
     cursor: pointer;
     line-height: 18px;
     font-size: 12px;
+    list-style: decimal;
   }
 
   & .playlist-item-link{

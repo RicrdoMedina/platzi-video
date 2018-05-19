@@ -19,7 +19,7 @@ body{
 
 .avatar{
   border-radius: 50%;
-  border: solid 2px #ccc;
+  border: solid 2px rgb(232,46,89);
 }
 
 .avatar--size-large{
