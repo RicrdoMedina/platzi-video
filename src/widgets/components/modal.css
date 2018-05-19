@@ -31,3 +31,7 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+.Modal-close:hover {
+  background: rgb(232,46,89);
+}
