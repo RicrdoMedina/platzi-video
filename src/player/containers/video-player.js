@@ -18,7 +18,7 @@ class VideoPlayer extends Component {
     currentTime: 0,
     durationFloat: 0,
     timeFloat: 0,
-    loading: false,
+    loading: true,
     volume: 1,
     lastValue: null,
   }
@@ -82,6 +82,11 @@ class VideoPlayer extends Component {
     this.video.volume = event.target.value
     this.setState({ volume: this.video.volume })
   }
+  handleReady = event => {
+    this.setState({
+      loading: false,
+    })
+  }
   handleFullScreenClick = event => {
     if (!document.webkitIsFullScreen) {
       this.player.webkitRequestFullscreen()
@@ -131,6 +136,7 @@ class VideoPlayer extends Component {
           handleTimeUpdate = { this.handleTimeUpdate }
           handleSeeking = { this.handleSeeking }
           handleSeeked = { this.handleSeeked }
+          handleReady = { this.handleReady }
           src = { this.props.src }
         />
       </VideoPlayerLayout>
