@@ -1,5 +1,4 @@
 import React from 'react'
-import './account-user.css'
 
 const AccountUser = (props) => (
   <div className = "Account">

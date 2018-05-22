@@ -1,0 +1,36 @@
+/* Reset */
+
+html, body{
+  height: 100%
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+small {
+  font-size: 12px;
+}
+
+b, strong {
+  font-weight: normal;
+}
+
+ul,ol{
+  padding-left: 0;
+  margin: 0;
+}

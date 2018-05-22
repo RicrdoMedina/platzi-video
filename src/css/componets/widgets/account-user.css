@@ -1,0 +1,68 @@
+.Account{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  & .avatar{
+    margin-right: 5px;
+  }
+}
+
+.dropdown{
+  position: relative;
+  width: auto;
+  font-size: 12px;
+
+  & .dropdown-toggle{
+    width: inherit;
+    color: var( --colorWhite );
+    background: var( --colorBlack );
+    border: 1px solid transparent;
+    padding: 8px 10px;
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  & .dropdown-toggle:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    font-size: 14px;
+  }
+
+  &.open .dropdown-toggle:after{
+    transform: rotate( 180deg );
+  }
+
+  & .dropdown-menu{
+    position: absolute;
+    margin-top: 1px;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 8px;
+    background: var( --colorBlack );
+    padding: 5px 8px;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  &.open .dropdown-menu{
+    display: block;
+  }
+
+  & .dropdown-item{
+    display: block;
+    padding: 6px 8px;
+    text-decoration: none;
+    color: var( --colorWhite );
+  }
+}

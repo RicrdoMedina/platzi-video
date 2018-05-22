@@ -1,0 +1,5 @@
+.related-title{
+  color: var( --colorWhite );
+  font-size: var( --fontSizeTitlePrimary );
+  margin: 30px 0;
+}

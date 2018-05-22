@@ -1,0 +1,29 @@
+.content-categories{
+  margin-top: 60px;
+  padding: 0 10px;
+}
+.row-container-category{
+  padding-top: 10px;
+}
+.wrapper-subcategory{
+  width: 100%;
+
+  & .title-subcategory{
+    color: rgba( 21, 27, 49, .62 );
+    margin: 10px 0;
+    font-size: var( --fontSizeTitleSecondary );
+  }
+}
+
+.title-category, .title-result-search.show{
+  color: rgb( 232, 46, 89 );
+  font-size: var( --fontSizeTitlePrimary );
+  display: block;
+}
+.title-category{
+  margin: 0;
+}
+.title-result-search{
+  margin: 15px 0;
+  display: none;
+}

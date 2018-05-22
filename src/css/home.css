@@ -1,0 +1,55 @@
+@import "./lib/variables.css";
+
+@import "./general/general.css";
+
+@import "./utils/utils.css";
+
+@import "./base/avatar.css";
+
+@import "./componets/homelayout/home-layout.css";
+
+@import "./componets/homelayout/related.css";
+
+@import "./componets/categories/category.css";
+
+@import "./componets/myplaylist/my-playlist.css";
+
+@import "./componets/myplaylist/title.css";
+
+@import "./componets/playlist/playlist.css";
+
+@import "./componets/playlist/media.css";
+
+@import "./componets/playlist-friends/playlists-friends-layout.css";
+
+@import "./componets/playlist-friends/playlists-friends.css";
+
+@import "./componets/related-menu/menu.css";
+
+@import "./componets/player/video-player-layout.css";
+
+@import "./componets/player/video-player-controls.css";
+
+@import "./componets/player/video.css";
+
+@import "./componets/player/volume.css";
+
+@import "./componets/player/title.css";
+
+@import "./componets/player/timer.css";
+
+@import "./componets/player/spinner.css";
+
+@import "./componets/player/progress-bar.css";
+
+@import "./componets/player/play-pause.css";
+
+@import "./componets/player/full-screen.css";
+
+@import "./componets/widgets/top-fixed-categories.css";
+
+@import "./componets/widgets/search.css";
+
+@import "./componets/widgets/account-user.css";
+
+@import "./componets/widgets/modal.css";

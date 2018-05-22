@@ -1,0 +1,18 @@
+.icon{
+  font-size: 18px;
+  margin-right: 8px;
+
+  &.icon--small{
+    font-size: 14px;
+  }
+
+  &.icon--large{
+    font-size: 21px;
+  }
+  
+  &.icon--tweet-box{
+    font-size: 19px;
+    color: #91D2FA;
+    cursor: pointer;
+  }
+}

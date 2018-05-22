@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import HomeLayout from '../components/home-layout.jsx'
-import Categories from '../../categories/components/categories.jsx'
-import Related from '../components/related.jsx'
-import ModalContainer from '../../widgets/containers/modal-container.jsx'
-import Modal from '../../widgets/components/modal.jsx'
-import HandleError from '../../error/containers/handle-error.jsx'
+import HomeLayout from '../components/home-layout'
+import Categories from '../../categories/components/categories'
+import Related from '../components/related'
+import ModalContainer from '../../widgets/containers/modal-container'
+import Modal from '../../widgets/components/modal'
+import HandleError from '../../error/containers/handle-error'
 import VideoPlayer from '../../player/containers/video-player'
+import { connect } from 'react-redux'
 
 class Home extends Component {
   state = {
@@ -32,8 +33,9 @@ class Home extends Component {
             handleOpenModal = { this.handleOpenModal }
           />
           <Categories 
-            categories={ this.props.data.categories }
+            categories={ this.props.categories }
             handleOpenModal = { this.handleOpenModal }
+            search = { this.props.search }
           />
           {
             this.state.modalVisible && 
@@ -53,4 +55,11 @@ class Home extends Component {
   }
 }
 
-export default Home
+function mapStateToProps (state, props) {
+  return {
+    categories: state.data.categories,
+    search: state.search
+  }
+}
+
+export default connect(mapStateToProps) (Home)

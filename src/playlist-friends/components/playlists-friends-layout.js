@@ -1,5 +1,4 @@
 import React from 'react'
-import './playlists-friends-layout.css'
 
 const PlaylistsFriendsLayout = (props) => (
   <div

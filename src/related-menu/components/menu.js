@@ -1,5 +1,4 @@
 import React from 'react'
-import './menu.css'
 
 const Menu = () => (
   <ul className = "Menu u-ul-list-style">

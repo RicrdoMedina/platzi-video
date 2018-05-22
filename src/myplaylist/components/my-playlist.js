@@ -1,5 +1,4 @@
 import React from 'react'
-import './my-playlist.css'
 import PlaylistItem from './playlist-item'
 
 const Playlist = (props) => {

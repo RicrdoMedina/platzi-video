@@ -1,0 +1,8 @@
+.link{
+  color: var( --colorWhite );
+}
+
+.link-hover{
+  color: unset;
+  text-decoration: none;
+}

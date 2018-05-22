@@ -1,7 +1,6 @@
 import React from 'react'
 import VolumeIcon from '../../icons/components/volume'
-import MuteIcon from '../../icons/components/mute' 
-import './volume.css'
+import MuteIcon from '../../icons/components/mute'
 
 function Volume (props) {
   return (

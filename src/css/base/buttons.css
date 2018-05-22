@@ -1,0 +1,44 @@
+.button{
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  outline: 0;
+  color: var( --colorWhite );
+  border-color: transparent;
+}
+
+.button--primary{
+  background-color: #A7DBFB;
+}
+
+.button--primary:hover, .button--primary:active {
+  background-color: #91D2FA;
+}
+
+.button--secondary {
+  background-color: var( --colorWhite );
+  border: 1px solid #1da1f2;
+  min-width: 89px;
+}
+
+.button--secondary, .button--secondary:hover, .button--secondary:focus, .button--secondary:active {
+  border-color: var( --colorLightSkyBlue );
+  color: var( --colorLightSkyBlue );
+}
+
+.button--small {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 12px;
+}
+
+.button--secondary:hover {
+  background-color: var( --colorGhostWhite );
+}

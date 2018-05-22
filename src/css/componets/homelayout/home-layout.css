@@ -1,0 +1,24 @@
+.Home-layout{
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 25vw 1fr;
+  grid-template-areas: "related categories";
+
+  & .Related{
+    grid-area: related;
+    background: var( --colorBlack );
+    padding: 0 15px;
+  }
+
+  & .Categories{
+    grid-area: categories;
+    background: var( --colorWhite );
+    box-sizing: border-box;
+  }
+
+  & .Related, & .Categories{
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
