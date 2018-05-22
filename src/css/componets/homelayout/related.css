@@ -1,9 +1,0 @@
-.content-logo{
-  width: 100%;
-  margin-top: 20px;
-  
-  & .logo{
-    width: 210px;
-    max-width: 100%;
-  }
-}

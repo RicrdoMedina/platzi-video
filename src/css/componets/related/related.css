@@ -1,0 +1,21 @@
+.content-logo{
+  width: 100%;
+  margin-top: 20px;
+  height: 15vh;
+  
+  & .logo{
+    width: 210px;
+    max-width: 100%;
+  }
+}
+
+.content-related{
+  width: 100%;
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+.content-related, .content-logo{
+  padding: 0 10px;
+  box-sizing: border-box;
+}

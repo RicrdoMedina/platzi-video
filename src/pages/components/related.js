@@ -2,7 +2,6 @@ import React from 'react'
 import MyPlaylistContainer from '../../myplaylist/containers/my-playlist'
 import PlaylistFriendsContainer from '../../playlist-friends/containers/playlists-friends-container'
 import MenuContainer from '../../related-menu/containers/menu-container'
-import Footer from '../../footer/footer'
 
 function Related (props) {
   return (
@@ -19,13 +18,14 @@ function Related (props) {
           />
         </a>
       </div>
-      <MyPlaylistContainer
-        myplaylists = { props.myplaylists }
-        handleOpenModal = { props.handleOpenModal }
-      />
-      <PlaylistFriendsContainer friends = { props.friends } />
-      <MenuContainer />
-      <Footer />
+      <div className = "content-related">
+        <MyPlaylistContainer
+          myplaylists = { props.myplaylists }
+          handleOpenModal = { props.handleOpenModal }
+        />
+        <PlaylistFriendsContainer friends = { props.friends } />
+        <MenuContainer />
+      </div>
     </div>
   )
 }
