@@ -6,6 +6,8 @@
 
 @import "./base/avatar.css";
 
+@import "./base/alerts.css";
+
 @import "./componets/homelayout/home-layout.css";
 
 @import "./componets/related/related.css";

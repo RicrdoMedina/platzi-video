@@ -3,18 +3,18 @@ import Category from './category'
 import TopFixedCategories from '../../widgets/components/top-fixed-categories'
 import Search from '../../widgets/containers/search-container'
 import Account from '../../widgets/containers/account-container'
+import Alert from '../../widgets/components/alert'
 import Media from '../../playlist/components/media'
 
 function Categories (props) {
-  if (props.search.length > 0) {
+  if ( typeof(props.search) !== 'undefined' && props.search.length > 0) {
     const matchResults = `Coincidencias: ${props.search.length}`
     const arrSearch = [{ id: '0', description: matchResults, title: 'Resultado de busqueda', playlist: props.search }]
-
     return (
       <div className="Categories">
         <div className="content-categories">
           <TopFixedCategories>
-            <Search />
+            <Search/>
             <Account />
           </TopFixedCategories>
           {
@@ -42,12 +42,17 @@ function Categories (props) {
         </div>
       </div>
     )
-  } else {
+  } else { 
     return (
       <div className="Categories">
         <div className="content-categories">
           <TopFixedCategories>
-            <Search />
+            <Search/>
+            <Alert
+              display = { typeof(props.search) === 'undefined' ? 'true' : 'false' }
+              type = "info"
+              message = "No se encontraron resultados"
+            />
             <Account />
           </TopFixedCategories>
           {

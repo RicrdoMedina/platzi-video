@@ -9,4 +9,20 @@
   top: 0;
   padding: 0 8px;
   box-sizing: border-box;
+
+  & .alert{
+    padding: 8px;
+    display: inline-block;
+    position: absolute;
+    left: 336px;
+    font-size: var( --fontSize );
+    font-weight: bold;
+    opacity: 0;
+    transition: all 1s ease-out;
+  }
+
+  & .alert.show{
+    opacity: 1;
+    transition: all 1s ease-in;
+  }
 }

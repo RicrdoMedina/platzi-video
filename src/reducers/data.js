@@ -12,6 +12,10 @@ function data (state, action) {
           const query = action.payload.query.toLowerCase()
           return author.includes(query)
         })
+
+        if (results.length === 0) {
+          results = undefined
+        }
       }
       return {
         ...state,
