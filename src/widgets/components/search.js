@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Search = (props) => (
-  <form className="Search" onSubmit = { props.handleSubmit }>
+  <form className="Search" onSubmit = { props.handleSubmit } autocomplete="off">
     <input
       ref={ props.setRef }
       type="text"

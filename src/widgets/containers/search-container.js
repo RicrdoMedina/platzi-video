@@ -8,6 +8,9 @@ class SearchContainer extends Component {
   }
   handleSubmit = event => {
     event.preventDefault()
+    if (this.input.value !== '') {
+      this.props.handleShowSpinnerSearch()
+    }
     this.props.dispatch({
       type: 'SEARCH_VIDEO',
       payload: {

@@ -10,7 +10,8 @@ import { connect } from 'react-redux'
 
 class Home extends Component {
   state = {
-    modalVisible: false
+    modalVisible: false,
+    spinnerVisible: false
   }
   handleOpenModal = (media) => {
     this.setState({
@@ -21,6 +22,11 @@ class Home extends Component {
   handleCloseModal = (event) => {
     this.setState({
       modalVisible: false
+    })
+  }
+  handleShowSpinnerSearch = () => {
+    this.setState({
+      spinnerVisible: !this.state.spinnerVisible
     })
   }
   render () {
@@ -36,6 +42,8 @@ class Home extends Component {
             categories={ this.props.categories }
             handleOpenModal = { this.handleOpenModal }
             search = { this.props.search }
+            spinner = { this.state.spinnerVisible }
+            handleShowSpinnerSearch = { this.handleShowSpinnerSearch }
           />
           {
             this.state.modalVisible && 
