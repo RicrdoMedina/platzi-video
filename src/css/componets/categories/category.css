@@ -3,7 +3,7 @@
   padding: 0 10px;
 
   & .spinner{
-    width: 120px;
+    width: 100px;
     display: none;
     transition: all 1s ease-out;
     margin: 70px auto;
@@ -26,7 +26,7 @@
 }
 .row-container-category{
   padding: 10px;
-  opacity: 1;
+  display: block;
 }
 .wrapper-subcategory{
   width: 100%;
@@ -51,7 +51,15 @@
   display: none;
 }
 .content-categories.searching{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  & .content-spinner{
+    margin: auto;
+    width: 50%;
+  }
 
   & .spinner{
     display: block;
@@ -59,6 +67,6 @@
   }
 
   & .row-container-category{
-    opacity: 0;
+    display: none;
   }
 }
