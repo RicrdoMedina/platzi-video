@@ -25,10 +25,10 @@
 
 .Volume input {
   cursor: grab;
-  background: blue;
-  border: 1px solid blue;
 }
 
 .Volume:hover .Volume-range {
   display: flex;
+  align-items: center;
 }
+

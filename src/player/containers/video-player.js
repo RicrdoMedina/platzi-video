@@ -63,6 +63,7 @@ class VideoPlayer extends Component {
   }
   handleVolumeToggle = () => {
     const lastValue = this.video.volume;
+    console.log(lastValue)
     this.setState ({
       lastValue
     })
@@ -88,10 +89,17 @@ class VideoPlayer extends Component {
     })
   }
   handleFullScreenClick = event => {
-    if (!document.webkitIsFullScreen) {
-      this.player.webkitRequestFullscreen()
-    } else {
-      document.webkitExitFullscreen()
+    if (document.mozFullScreen) {
+      document.mozCancelFullScreen();
+    }
+    else if (document.webkitIsFullScreen) {
+      document.webkitExitFullscreen();
+    }
+    else if (this.player.mozRequestFullScreen) {
+      this.player.mozRequestFullScreen();
+    }
+    else if (this.player.webkitRequestFullscreen) {
+      this.player.webkitRequestFullscreen(); 
     }
   }
   setRef = element => {

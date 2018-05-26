@@ -4,7 +4,7 @@ import MuteIcon from '../../icons/components/mute'
 
 function Volume (props) {
   return (
-    <button className = "Volume">
+    <div className = "Volume">
       <div onClick = { props.handleVolumeToggle }>
         {
           props.volume ?
@@ -29,7 +29,7 @@ function Volume (props) {
           value = { props.volume }
         />
       </div>
-    </button>
+    </div>
   )
 }
 
