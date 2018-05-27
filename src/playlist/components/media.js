@@ -39,10 +39,10 @@ class Media extends PureComponent {
 }
 
 Media.propTypes = {
-  cover: PropTypes.string,
+  cover: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  author: PropTypes.string,
-  type: PropTypes.oneOf(['video', 'audio'])
+  author: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['video', 'audio']).isRequired
 }
 
 export default Media

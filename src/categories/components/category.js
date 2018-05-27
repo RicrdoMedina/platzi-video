@@ -2,7 +2,7 @@ import React from 'react'
 import Playlist from '../../playlist/components/playlist'
 
 function Category (props) {
-  const { title, description, playlist } = props
+  const { title, description, playlist, handleOpenModal } = props
   
   return (
     <div className="row-container-category">
@@ -10,7 +10,7 @@ function Category (props) {
       <div className="wrapper-subcategory">
         <h4 className="title-subcategory"> { description } </h4>
         <Playlist
-          handleOpenModal = { props.handleOpenModal }
+          handleOpenModal = { handleOpenModal }
           playlists = { playlist }
         />
       </div>

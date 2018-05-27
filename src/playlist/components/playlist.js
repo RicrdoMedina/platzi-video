@@ -2,12 +2,12 @@ import React from 'react'
 import Media from './media'
 
 function Playlist (props) {
-  const { playlists } = props
+  const { playlists, handleOpenModal } = props
   return (
     <div className = "Playlist">
       {
         playlists.map( (playlist) => {
-          return <Media openModal = { props.handleOpenModal } { ...playlist } key = { playlist.id }/>
+          return <Media openModal = { handleOpenModal } { ...playlist } key = { playlist.id }/>
         })
       }
     </div>

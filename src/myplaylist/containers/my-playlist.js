@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MyPlaylistLayout from '../components/my-playlist-layout'
 import Title from '../components/title'
 import MyPlaylist from '../components/my-playlist'
+import PropTypes from 'prop-types'
 
 class MyPlaylistContainer extends Component {
   render () {
@@ -15,6 +16,11 @@ class MyPlaylistContainer extends Component {
       </MyPlaylistLayout>
     )
   }
+}
+
+MyPlaylistContainer.propTypes = {
+  handleOpenModal: PropTypes.func.isRequired,
+  myplaylists: PropTypes.array.isRequired
 }
 
 export default MyPlaylistContainer

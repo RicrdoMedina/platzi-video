@@ -10,6 +10,7 @@ import ProgressBar from '../components/progress-bar'
 import Spinner from '../components/spinner'
 import Volume from '../components/volume'
 import FullScreen from '../components/full-screen'
+import PropTypes from 'prop-types'
 
 class VideoPlayer extends Component {
   state = {
@@ -63,7 +64,6 @@ class VideoPlayer extends Component {
   }
   handleVolumeToggle = () => {
     const lastValue = this.video.volume;
-    console.log(lastValue)
     this.setState ({
       lastValue
     })
@@ -150,6 +150,12 @@ class VideoPlayer extends Component {
       </VideoPlayerLayout>
     )
   }
+}
+
+VideoPlayer.propTypes = {
+  autoplay: PropTypes.bool.isRequired,
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default VideoPlayer

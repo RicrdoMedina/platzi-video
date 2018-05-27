@@ -7,6 +7,7 @@ import Modal from '../../widgets/components/modal'
 import HandleError from '../../error/containers/handle-error'
 import VideoPlayer from '../../player/containers/video-player'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 class Home extends Component {
   state = {
@@ -52,7 +53,7 @@ class Home extends Component {
                 <Modal handleClick = { this.handleCloseModal }>
                   <VideoPlayer
                     autoplay = { true }
-                    src= { this.state.media.src }
+                    src = { this.state.media.src }
                     title = { this.state.media.title }
                   />
                 </Modal>
@@ -63,6 +64,13 @@ class Home extends Component {
       </HandleError>
     )
   }
+}
+
+Home.propTypes = {
+  categories: PropTypes.array.isRequired,
+  friends: PropTypes.array.isRequired,
+  playlists: PropTypes.array.isRequired,
+  search: PropTypes.array.isRequired
 }
 
 function mapStateToProps (state, props) {

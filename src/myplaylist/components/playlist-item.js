@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 class PlaylistItem extends PureComponent {
   handleClick = (event) => {
@@ -13,6 +14,11 @@ class PlaylistItem extends PureComponent {
       </li>
     )
   }
+}
+
+PlaylistItem.propTypes = {
+  openModal: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default PlaylistItem

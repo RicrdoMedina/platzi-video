@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 class PlaylistFriendItem extends PureComponent {
   render () {
@@ -11,6 +12,11 @@ class PlaylistFriendItem extends PureComponent {
       </li>
     )
   }
+}
+
+PlaylistFriendItem.propTypes = {
+  friend: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired
 }
 
 export default PlaylistFriendItem
