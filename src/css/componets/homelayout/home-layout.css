@@ -8,20 +8,9 @@
     grid-template: 1fr / 280px 1fr;
   }
 
-  @media ( --tablet ) {
-    display: block;
-    grid-template: unset;
-    grid-template-areas: unset;
-  }
-
   & .Related{
     grid-area: related;
     background: var( --colorBlack );
-
-    @media ( --tablet ) {
-      grid-area: none;
-      display: block;
-    }
   }
 
   & .Categories{
@@ -43,5 +32,12 @@
     @media ( --tablet ) {
       height: auto;
     }
+  }
+}
+
+#home-container .Home-layout {
+  @media ( --tablet ) {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "related" "categories";
   }
 }
