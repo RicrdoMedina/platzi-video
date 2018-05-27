@@ -2,7 +2,18 @@
   margin-top: 10px;
   padding: 0 10px;
 
-  & .spinner{
+  & .Spinner{
+    position: unset;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    display: unset;
+    align-items: unset;
+    justify-content: unset;
+  }
+
+  & .Spinner img{
     width: 100px;
     display: none;
     transition: all 1s ease-out;
@@ -56,12 +67,12 @@
   height: 100%;
   justify-content: center;
 
-  & .content-spinner{
+  & .Spinner{
     margin: auto;
     width: 50%;
   }
 
-  & .spinner{
+  & .Spinner img{
     display: block;
     transition: all 1s ease-in;
   }

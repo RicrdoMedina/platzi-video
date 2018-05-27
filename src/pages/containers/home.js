@@ -39,7 +39,7 @@ class Home extends Component {
             friends = { this.props.friends }
             handleOpenModal = { this.handleOpenModal }
           />
-          <Categories 
+          <Categories
             categories={ this.props.categories }
             handleOpenModal = { this.handleOpenModal }
             search = { this.props.search }

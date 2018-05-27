@@ -9,7 +9,7 @@ import data from '../api.json'
 import dataPlaylists from '../myplaylists.json'
 import dataFriends from '../playlists-friends.json'
 import reducer from '../reducers/data'
-import '../css/home.css'
+import '../css/styles.css'
 
 const initialState = {
   data: {

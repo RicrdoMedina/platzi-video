@@ -4,7 +4,7 @@ import TopFixedCategories from '../../widgets/components/top-fixed-categories'
 import Search from '../../widgets/containers/search-container'
 import Account from '../../widgets/containers/account-container'
 import Alert from '../../widgets/components/alert'
-import Loader from '../../widgets/components/Loader'
+import Spinner from '../../utils/components/spinner'
 import Media from '../../playlist/components/media'
 
 const Categories = (props) => {
@@ -34,7 +34,7 @@ const Categories = (props) => {
           type = "info"
           message = "No se encontraron resultados"
         />
-        <Loader/>
+        <Spinner active = { spinner } />
         {
           arrSearch.map((item) => {
             return (

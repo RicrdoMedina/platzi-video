@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MyPlaylistLayout from '../components/my-playlist-layout'
-import Title from '../components/title'
+import Title from '../../utils/components/title'
 import MyPlaylist from '../components/my-playlist'
 import PropTypes from 'prop-types'
 
