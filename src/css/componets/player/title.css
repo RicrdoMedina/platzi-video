@@ -5,9 +5,19 @@
   background: rgba( 0, 0, 0, .5 );
   color: white;
   padding: 10px 20px;
+
+  @media ( --tablet ) {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 .Title h2 {
   margin: 0;
   font-size: var( --fontSizeTitlePrimary );
   font-weight: normal;
+
+  @media ( --tablet ) {
+    font-size: var( --fontSize );
+  }
 }

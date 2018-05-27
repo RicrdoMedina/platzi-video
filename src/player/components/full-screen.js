@@ -7,7 +7,7 @@ const FullScreen = (props) => {
          onClick = { props.handleFullScreenClick }
     >
       <FullScreenIcon
-        size = { 25 }
+        size = { 20 }
         color = "white"
       />
     </div>

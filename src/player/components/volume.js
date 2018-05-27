@@ -10,12 +10,12 @@ function Volume (props) {
           props.volume ?
             <VolumeIcon
               color = "white"
-              size = { 25 }
+              size = { 20 }
             />
             :
             <MuteIcon
               color = "red"
-              size = { 25 }
+              size = { 20 }
             />
         }
       </div>

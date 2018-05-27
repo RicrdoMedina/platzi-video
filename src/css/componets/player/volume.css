@@ -21,10 +21,29 @@
   background: rgba( 0, 0, 0, .7 );
   padding-right: 20px;
   border-radius: 0 20px 20px 0;
+
+  @media ( --tablet ) {
+    height: 50px;
+    display: flex;
+    background: unset;
+    padding: 0 0 0 10px;
+    border-radius: 0 20px 20px 0;
+    align-items: center;
+    width: 60px;
+    position: relative;
+    transform: unset;
+    bottom: unset;
+    left: unset;
+    transform-origin: unset;
+  }
 }
 
 .Volume input {
   cursor: grab;
+
+  @media ( --tablet ) {
+    width: inherit;
+  }
 }
 
 .Volume:hover .Volume-range {

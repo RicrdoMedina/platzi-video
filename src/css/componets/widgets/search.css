@@ -9,6 +9,10 @@
   justify-content: space-between;
   padding: 0 6px 0 0;
 
+  @media ( --desktop ) {
+    width: 230px;
+  }
+
   & .Search-input{
     background: transparent;
     border: none;
@@ -17,5 +21,24 @@
     outline: 0;
     border-radius: 10px;
     padding: 0 0 0 4px;
+
+    @media ( --desktop ) {
+      width: 120px;
+    }
+  }
+}
+
+.top-fixed-categories .Search{
+
+  @media ( --tablet ) {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  & .Search-input{
+
+    @media ( --tablet ) {
+      width: inherit;
+    }
   }
 }

@@ -8,3 +8,13 @@
   --fontSizeTitlePrimary: 16px;
   --fontSizeTitleSecondary: 14px;
 }
+
+@custom-media --mobile ( max-width: 500px );
+
+@custom-media --tablet ( max-width: 800px );
+
+@custom-media --desktop ( max-width: 1224px );
+
+@custom-media --largeDesktop  (min-width: 1824px );
+
+@custom-media --superiorTablet ( min-width : 800px );

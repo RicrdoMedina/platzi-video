@@ -11,6 +11,10 @@ body{
   font-family: Montserrat, sans-serif;
   position: relative;
   overflow: hidden;
+
+  @media ( --tablet ) {
+    overflow: auto;
+  }
 }
 
 a{

@@ -2,6 +2,10 @@
   width: 100%;
   margin-top: 20px;
   height: 15vh;
+
+  @media ( --tablet ) {
+    margin-top: 0;
+  }
   
   & .logo{
     width: 210px;
@@ -13,6 +17,12 @@
   width: 100%;
   overflow-y: scroll;
   height: 80vh;
+
+  @media ( --tablet ) {
+    overflow-y: auto;
+    height: auto;
+    padding: 10px 25px;
+  }
 }
 
 .content-related, .content-logo{

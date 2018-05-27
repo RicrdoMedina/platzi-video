@@ -1,12 +1,27 @@
 .Home-layout{
   width: 100%;
   display: grid;
-  grid-template: 1fr / 25vw 1fr;
+  grid-template: 1fr / 320px 1fr;
   grid-template-areas: "related categories";
+
+  @media ( --desktop ) {
+    grid-template: 1fr / 280px 1fr;
+  }
+
+  @media ( --tablet ) {
+    display: block;
+    grid-template: unset;
+    grid-template-areas: unset;
+  }
 
   & .Related{
     grid-area: related;
     background: var( --colorBlack );
+
+    @media ( --tablet ) {
+      grid-area: none;
+      display: block;
+    }
   }
 
   & .Categories{
@@ -15,9 +30,18 @@
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    @media ( --tablet ) {
+      overflow-y: auto;
+      overflow-x: auto;
+    }
   }
 
   & .Related, & .Categories{
     height: 100vh;
+
+    @media ( --tablet ) {
+      height: auto;
+    }
   }
 }
