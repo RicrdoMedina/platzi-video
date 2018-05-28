@@ -81,7 +81,7 @@ function mapStateToProps (state, props) {
 
   return {
     categories,
-    search: state.search
+    search: state.data.search
   }
 }
 

@@ -9,22 +9,25 @@ import Home from '../pages/containers/home'
 import data from '../schemas/index'
 import dataPlaylists from '../myplaylists.json'
 import dataFriends from '../playlists-friends.json'
-import reducer from '../reducers/data'
+import reducer from '../reducers/index'
 import '../css/styles.css'
 
-console.log(data)
 
-const initialState = {
-  data: {
-    entities: data.entities,
-    categories: data.result.categories
-  },
-  search: []
-}
+// const initialState = {
+//   data: {
+//     entities: data.entities,
+//     categories: data.result.categories,
+//     search: [],
+//   },
+//   modal: {
+//     visibility: false,
+//     mediaId: null
+//   }
+// }
 
 const store = createStore(
   reducer,
-  initialState,
+  {},
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
