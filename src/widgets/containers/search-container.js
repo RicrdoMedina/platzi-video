@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Search from '../components/search'
 import { connect } from 'react-redux'
+import { searchEntities } from '../../actions'
 
 class SearchContainer extends Component {
   state = {
@@ -11,12 +12,7 @@ class SearchContainer extends Component {
     if (this.input.value !== '') {
       this.props.handleShowSpinnerSearch()
     }
-    this.props.dispatch({
-      type: 'SEARCH_VIDEO',
-      payload: {
-        query: this.input.value
-      }
-    })
+    this.props.dispatch(searchEntities(this.input.value))
   }
   setInputRef = element => {
     this.input = element;
