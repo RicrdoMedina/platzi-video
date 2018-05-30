@@ -11,6 +11,7 @@ import Spinner from '../../utils/components/spinner'
 import Volume from '../components/volume'
 import FullScreen from '../components/full-screen'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 class VideoPlayer extends Component {
   state = {
@@ -109,7 +110,7 @@ class VideoPlayer extends Component {
     return (
       <VideoPlayerLayout setRef = { this.setRef }>
         <Title 
-          title = { this.props.title }
+          title = { this.props.media.get('title') }
         />
         <Controls>
           <PlayPause
@@ -145,17 +146,23 @@ class VideoPlayer extends Component {
           handleSeeking = { this.handleSeeking }
           handleSeeked = { this.handleSeeked }
           handleReady = { this.handleReady }
-          src = { this.props.src }
+          src = { this.props.media.get('src') }
         />
       </VideoPlayerLayout>
     )
   }
 }
 
-VideoPlayer.propTypes = {
-  autoplay: PropTypes.bool.isRequired,
-  src: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+// VideoPlayer.propTypes = {
+//   autoplay: PropTypes.bool.isRequired,
+//   src: PropTypes.string.isRequired,
+//   title: PropTypes.string.isRequired
+// }
+
+function mapStateToProps (state, props) {
+  return {
+    media: state.get('data').get('entities').get('media').get(props.id)
+  }
 }
 
-export default VideoPlayer
+export default connect(mapStateToProps)(VideoPlayer)

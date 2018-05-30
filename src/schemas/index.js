@@ -2,7 +2,6 @@ import api from '../api.json'
 
 import { normalize, schema } from 'normalizr'
 
-
 //const media = new schema.Entity(key, definicion de mi esquema, opciones)
 const media = new schema.Entity('media', {}, {
   idAttribute: 'id',

@@ -3,7 +3,7 @@ import Playlist from '../../playlist/components/playlist'
 
 function Category (props) {
   const { title, description, playlist, handleOpenModal } = props
-  
+
   return (
     <div className="row-container-category">
       <h3 className="title-category">{ title }</h3>

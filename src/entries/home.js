@@ -11,7 +11,7 @@ import dataPlaylists from '../myplaylists.json'
 import dataFriends from '../playlists-friends.json'
 import reducer from '../reducers/index'
 import '../css/styles.css'
-
+import { Map as map } from 'immutable'
 
 // const initialState = {
 //   data: {
@@ -27,7 +27,7 @@ import '../css/styles.css'
 
 const store = createStore(
   reducer,
-  {},
+  map(),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 

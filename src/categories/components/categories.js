@@ -8,7 +8,10 @@ import Spinner from '../../utils/components/spinner'
 import Media from '../../playlist/components/media'
 
 const Categories = (props) => {
-  const { spinner, search, categories, handleShowSpinnerSearch, handleOpenModal } = props
+  const { spinner, categories, search, statusSearchResults, handleShowSpinnerSearch, handleOpenModal } = props
+  // const categories = props.categories.toJS()
+  // const search = props.search.toJS()
+  // console.log(categories)
 
   if (spinner) {
     setTimeout(() => {
@@ -16,9 +19,19 @@ const Categories = (props) => {
     }, 4000)
   }
 
-  const matchResults = typeof(search) !== 'undefined' && search.length > 0 ? `Coincidencias: ${search.length}` : undefined
+  let listPlaylistIds = new Set()
 
-  const arrSearch = typeof(search) !== 'undefined' && search.length > 0 ? [{ id: '0', description: matchResults, title: 'Resultado de busqueda', playlist: search }] : []
+  if (statusSearchResults){
+    search.map((item) => {
+      listPlaylistIds.add(item.get('id'))
+    })
+  }
+
+  listPlaylistIds = [...listPlaylistIds]
+
+  const matchResults = statusSearchResults ? `Coincidencias: ${search.size}` : undefined
+
+  const arrSearch = statusSearchResults ? [{ id: '0', description: matchResults, title: 'Resultado de busqueda', playlist: listPlaylistIds }] : []
 
   return (
     <div className="Categories">
@@ -30,7 +43,7 @@ const Categories = (props) => {
           <Account />
         </TopFixedCategories>
         <Alert
-          classDisplay = { typeof(search) === 'undefined' && spinner === false ? 'show' : '' }
+          classDisplay = { statusSearchResults !== null && !statusSearchResults  && spinner === false ? 'show' : '' }
           type = "info"
           message = "No se encontraron resultados"
         />
@@ -39,8 +52,10 @@ const Categories = (props) => {
           arrSearch.map((item) => {
             return (
               <Category
-                key={ item.id }
-                { ...item }
+                key = { item.id }
+                title = { item.title }
+                description = { item.description }
+                playlist = { item.playlist }
                 handleOpenModal = { handleOpenModal }
               />
             )
@@ -50,8 +65,10 @@ const Categories = (props) => {
           categories.map((item) => {
             return (
               <Category
-                key={ item.id }
-                { ...item }
+                key = { item.get('id')}
+                title = { item.get('title') }
+                description = { item.get('description') }
+                playlist = { item.get('playlist') }
                 handleOpenModal = { handleOpenModal }
               />
             )
