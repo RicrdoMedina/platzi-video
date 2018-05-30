@@ -9,7 +9,14 @@ import VideoPlayer from '../../player/containers/video-player'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { List as list } from 'immutable'
-import { openModal, closeModal } from '../../actions/index'
+// import * as actions from '../../actions/index'
+// import { bindActionCreators } from 'redux'
+import { openModal, closeModal } from'../../actions/index';
+
+const mapDispatchToProps = {
+  openModal,
+  closeModal
+}
 
 class Home extends Component {
   state = {
@@ -21,13 +28,15 @@ class Home extends Component {
     //   modalVisible: true,
     //   media
     // })
-    this.props.dispatch(openModal(id))
+    //this.props.dispatch(openModal(id))
+    this.props.openModal(id)
   }
   handleCloseModal = (event) => {
     // this.setState({
     //   modalVisible: false
     // })
-    this.props.dispatch(closeModal())
+    // this.props.dispatch(closeModal())
+    this.props.closeModal()
   }
   handleShowSpinnerSearch = () => {
     this.setState({
@@ -105,4 +114,10 @@ function mapStateToProps (state, props) {
   }
 }
 
-export default connect(mapStateToProps) (Home)
+// function mapDispatchToProps (dispatch) {
+//   return {
+//     actions: bindActionCreators(actions, dispatch)
+//   }
+// }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import Search from '../components/search'
 import { connect } from 'react-redux'
-import { searchEntities } from '../../actions'
+// import * as actions from '../../actions'
+// import { bindActionCreators } from 'redux'
+import { searchEntities } from'../../actions/index';
+
+const mapDispatchToProps = {
+	searchEntities
+}
 
 class SearchContainer extends Component {
   state = {
@@ -12,7 +18,7 @@ class SearchContainer extends Component {
     if (this.input.value !== '') {
       this.props.handleShowSpinnerSearch()
     }
-    this.props.dispatch(searchEntities(this.input.value))
+    this.props.searchEntities(this.input.value)
   }
   setInputRef = element => {
     this.input = element;
@@ -34,4 +40,10 @@ class SearchContainer extends Component {
   }
 }
 
-export default connect()(SearchContainer)
+// function mapDispatchToProps (dispatch) {
+//   return {
+//     actions: bindActionCreators(actions, dispatch)
+//   }
+// }
+
+export default connect(null, mapDispatchToProps)(SearchContainer)
