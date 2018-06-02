@@ -12,6 +12,9 @@ import dataFriends from '../playlists-friends.json'
 import reducer from '../reducers/index'
 import '../css/styles.css'
 import { Map as map } from 'immutable'
+import logger from 'redux-logger'
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 // const initialState = {
 //   data: {
@@ -26,17 +29,17 @@ import { Map as map } from 'immutable'
 // }
 
 // ----- versión pre-ES6
-function logger({ dispatch, getState }){
-	return ( next ) => {
- 		return ( action ) => {
- 			console.log( 'estado anterior:', getState().toJS() )
- 			console.log( 'enviando acción:', action)
- 			const rslt = next( action )
- 			console.log( 'nuevo estado   :', getState().toJS() )
- 			return rslt
- 		}
-	}
-}
+// function logger({ dispatch, getState }){
+// 	return ( next ) => {
+//  		return ( action ) => {
+//  			console.log( 'estado anterior:', getState().toJS() )
+//  			console.log( 'enviando acción:', action)
+//  			const rslt = next( action )
+//  			console.log( 'nuevo estado   :', getState().toJS() )
+//  			return rslt
+//  		}
+// 	}
+// }
 
 // --- versión ES6
 // const logger = ({ dispatch, getState }) => next => action => {
@@ -50,7 +53,12 @@ function logger({ dispatch, getState }){
 const store = createStore(
   reducer,
   map(),
-  applyMiddleware(logger)
+  composeWithDevTools(
+    applyMiddleware(
+      logger,
+      thunk
+   )
+  )
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 

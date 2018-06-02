@@ -56,9 +56,10 @@ class Home extends Component {
             categories={ this.props.categories }
             handleOpenModal = { this.handleOpenModal }
             search = { this.props.search }
-            spinner = { this.state.spinnerVisible }
-            handleShowSpinnerSearch = { this.handleShowSpinnerSearch }
+            // spinner = { this.state.spinnerVisible }
+            // handleShowSpinnerSearch = { this.handleShowSpinnerSearch }
             statusSearchResults = { this.props.statusSearchResults }
+            isLoading = { this.props.isLoading }
           />
           {
             this.props.modal.get('visibility') && 
@@ -110,7 +111,8 @@ function mapStateToProps (state, props) {
     categories,
     search: searchResults,
     statusSearchResults,
-    modal: state.get('modal')
+    modal: state.get('modal'),
+    isLoading: state.get('isLoading').get('active')
   }
 }
 

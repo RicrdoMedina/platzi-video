@@ -3,10 +3,10 @@ import Search from '../components/search'
 import { connect } from 'react-redux'
 // import * as actions from '../../actions'
 // import { bindActionCreators } from 'redux'
-import { searchEntities } from'../../actions/index';
+import { searchEntities, searchAsyncEntities } from'../../actions/index';
 
 const mapDispatchToProps = {
-	searchEntities
+	searchAsyncEntities
 }
 
 class SearchContainer extends Component {
@@ -16,9 +16,10 @@ class SearchContainer extends Component {
   handleSubmit = event => {
     event.preventDefault()
     if (this.input.value !== '') {
-      this.props.handleShowSpinnerSearch()
+      //this.props.handleShowSpinnerSearch()
     }
-    this.props.searchEntities(this.input.value)
+    this.props.searchAsyncEntities(this.input.value)
+    //this.props.searchEntities(this.input.value)
   }
   setInputRef = element => {
     this.input = element;

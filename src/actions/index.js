@@ -1,4 +1,4 @@
-import { SEARCH_ENTITIES, OPEN_MODAL, CLOSE_MODAL } from '../actions-types'
+import { SEARCH_ENTITIES, SEARCH_ASYNC_ENTITIES, OPEN_MODAL, CLOSE_MODAL, IS_LOADING } from '../actions-types'
 
 export function openModal (mediaId) {
   return {
@@ -21,5 +21,26 @@ export function searchEntities (query) {
     payload: {
       query,
     }
+  }
+}
+
+export function isLoading (value) {
+  return {
+    type: IS_LOADING,
+    payload: {
+      value
+    }
+  }
+}
+
+export function searchAsyncEntities (query) {
+  return (dispatch) => {
+    if (query) dispatch(isLoading(true))
+    // Ejecutar aqui dentro la consulta a la api, trae, super agent, fetch, etc
+    setTimeout(() => {
+      if (query) dispatch(isLoading(false))
+      // funcion que se le pasa como callback a la peticion
+      dispatch(searchEntities(query))
+    }, 1000)
   }
 }

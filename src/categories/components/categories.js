@@ -4,20 +4,20 @@ import TopFixedCategories from '../../widgets/components/top-fixed-categories'
 import Search from '../../widgets/containers/search-container'
 import Account from '../../widgets/containers/account-container'
 import Alert from '../../widgets/components/alert'
-import Spinner from '../../utils/components/spinner'
+import Loading from '../../utils/components/spinner'
 import Media from '../../playlist/components/media'
 
 const Categories = (props) => {
-  const { spinner, categories, search, statusSearchResults, handleShowSpinnerSearch, handleOpenModal } = props
+  const { spinner, isLoading, categories, search, statusSearchResults, handleShowSpinnerSearch, handleOpenModal } = props
   // const categories = props.categories.toJS()
   // const search = props.search.toJS()
   // console.log(categories)
 
-  if (spinner) {
-    setTimeout(() => {
-      handleShowSpinnerSearch()
-    }, 4000)
-  }
+  // if (spinner) {
+  //   setTimeout(() => {
+  //     handleShowSpinnerSearch()
+  //   }, 4000)
+  // }
 
   let listPlaylistIds = new Set()
 
@@ -35,19 +35,19 @@ const Categories = (props) => {
 
   return (
     <div className="Categories">
-      <div id="contentCategories" className={ spinner ? 'content-categories searching' : 'content-categories' } >
+      <div id="contentCategories" className={ isLoading ? 'content-categories searching' : 'content-categories' } >
         <TopFixedCategories>
           <Search
-            handleShowSpinnerSearch = { handleShowSpinnerSearch }
+            // handleShowSpinnerSearch = { handleShowSpinnerSearch }
           />
           <Account />
         </TopFixedCategories>
         <Alert
-          classDisplay = { statusSearchResults !== null && !statusSearchResults  && spinner === false ? 'show' : '' }
+          classDisplay = { statusSearchResults !== null && !statusSearchResults  && isLoading === false ? 'show' : '' }
           type = "info"
           message = "No se encontraron resultados"
         />
-        <Spinner active = { spinner } />
+        <Loading active = { isLoading } />
         {
           arrSearch.map((item) => {
             return (
