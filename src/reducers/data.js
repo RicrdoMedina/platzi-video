@@ -1,11 +1,30 @@
 import schema from '../schemas'
+import schemaMyPlaylists from '../schemas/schema-myplaylists'
+import myPlaylistsApi from '../myplaylists.json'
+import playlistFriendsApi from '../playlists-friends.json'
 import { fromJS } from 'immutable'
 import { SEARCH_ENTITIES } from '../actions-types'
+
+// console.log(myPlaylistsApi)
+
+const myPlaylists = myPlaylistsApi.myplaylists.map((item) => {
+  //console.log(item)
+  return item
+})
+
+const playlistFriends = playlistFriendsApi.data.map((item) => {
+  //console.log(item)
+  return item
+})
+
+//console.log(schemaMyPlaylists)
 
 const initialState = fromJS({
   entities: schema.entities,
   categories: schema.result.categories,
   search: [],
+  myPlaylists: schemaMyPlaylists,
+  playlistFriends,
 })
 
 function data (state = initialState, action) {

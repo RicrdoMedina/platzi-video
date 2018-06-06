@@ -12,7 +12,7 @@
   @media ( --tablet ) {
     display: flex;
     position: absolute;
-    background: rgba(0, 0, 0, .7);
+    background: rgba( 0, 0, 0, .7 );
     bottom: 10px;
     left: 0;
     right: 0;

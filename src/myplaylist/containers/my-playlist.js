@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 
 class MyPlaylistContainer extends Component {
   render () {
+    //console.log(this.props.myplaylists, 'myPlaylists')
     return (
       <MyPlaylistLayout>
         <Title title="My Playlist"/>
@@ -18,9 +19,9 @@ class MyPlaylistContainer extends Component {
   }
 }
 
-MyPlaylistContainer.propTypes = {
-  handleOpenModal: PropTypes.func.isRequired,
-  myplaylists: PropTypes.array.isRequired
-}
+// MyPlaylistContainer.propTypes = {
+//   handleOpenModal: PropTypes.func.isRequired,
+//   myplaylists: PropTypes.array.isRequired
+// }
 
 export default MyPlaylistContainer

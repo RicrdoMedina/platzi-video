@@ -36,6 +36,7 @@
 }
 
 #home-container .Home-layout {
+
   @media ( --tablet ) {
     grid-template: 1fr / 1fr;
     grid-template-areas: "related" "categories";

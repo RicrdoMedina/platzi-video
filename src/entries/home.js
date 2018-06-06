@@ -68,6 +68,6 @@ const homeContainer = document.getElementById('home-container')
 
 render(
         <Provider store = { store }>
-          <Home playlists = { dataPlaylists.myplaylists } friends = { dataFriends.data } />
+          <Home friends = { dataFriends.data } />
         </Provider>, homeContainer
       )

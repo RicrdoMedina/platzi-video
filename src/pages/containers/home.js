@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 import { List as list } from 'immutable'
 // import * as actions from '../../actions/index'
 // import { bindActionCreators } from 'redux'
-import { openModal, closeModal } from'../../actions/index';
+import { openModal, closeModal } from'../../actions';
 
 const mapDispatchToProps = {
   openModal,
@@ -29,7 +29,8 @@ class Home extends Component {
     //   media
     // })
     //this.props.dispatch(openModal(id))
-    this.props.openModal(id)
+    //this.props.openModal(id)
+    this.props.openModal(media)
   }
   handleCloseModal = (event) => {
     // this.setState({
@@ -68,9 +69,12 @@ class Home extends Component {
                 <Modal handleClick = { this.handleCloseModal }>
                   <VideoPlayer
                     autoplay = { true }
-                    id = { this.props.modal.get('mediaId')}
+                    // id = { this.props.modal.get('mediaId')}
                     // src = { this.state.media.src }
-                    // title = { this.state.media.title }
+                    //  title = { this.state.media.title }
+                    id = { this.props.modal.id}
+                    src = { this.props.modal.src }
+                    title = { this.props.modal.title }
                   />
                 </Modal>
               </div>
@@ -93,6 +97,9 @@ function mapStateToProps (state, props) {
   const categories = state.get('data').get('categories').map((categoryId) => {
     return state.getIn(['data', 'entities', 'categories', categoryId])
   })
+
+  const playlists = state.getIn(['data','myPlaylists', 'result', 'myplaylists'])
+
   let searchResults = list()
   let statusSearchResults = null
   const search = state.get('data').get('search')
@@ -100,7 +107,7 @@ function mapStateToProps (state, props) {
     const mediaList = state.get('data').get('entities').get('media')
 
 		searchResults = mediaList.filter(function (item) {
-			if (item.get('author').toLowerCase().includes(search.toLowerCase()) || item.get('title').toLowerCase().includes(search.toLowerCase())){
+			if (item.get('author').toLowerCase().includes(search.toLowerCase()) || item.get('title').toLowerCase().includes(search.toLowerCase())) {
 				return true
 			}
     })
@@ -110,6 +117,7 @@ function mapStateToProps (state, props) {
   return {
     categories,
     search: searchResults,
+    playlists,
     statusSearchResults,
     modal: state.get('modal'),
     isLoading: state.get('isLoading').get('active')

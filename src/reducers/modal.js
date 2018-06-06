@@ -3,7 +3,7 @@ import { OPEN_MODAL, CLOSE_MODAL } from '../actions-types'
 
 const initialState = fromJS({
   visibility: false,
-  mediaId: null
+  media: null
 })
 
 function modal(state = initialState, action) {
@@ -12,7 +12,7 @@ function modal(state = initialState, action) {
       return state.merge(
         {
           visibility: true,
-          mediaId: action.payload.mediaId
+          media: action.payload.media
         }
       )
     case CLOSE_MODAL:

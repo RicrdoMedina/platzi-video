@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Media from '../components/media'
+import PlaylistItem from '../components/playlist-item'
 import { connect } from 'react-redux'
 // import * as actions from '../../actions'
 // import { bindActionCreators } from 'redux'
@@ -9,28 +9,25 @@ const mapDispatchToProps = {
 	openModal
 }
 
-class MediaContainer extends Component {
+class PlaylistItemContainer extends Component {
   openModal = (media) => {
     this.props.openModal(media)
   }
   render () {
-    return <Media
+    //console.log(this.props, 'props')
+    return <PlaylistItem
             openModal = { this.openModal }
-            title  = { this.props.data.get('title') }
-            author = { this.props.data.get('author') }
-            type   = { this.props.data.get('type') }
-            cover  = { this.props.data.get('cover') }
-            src    = { this.props.data.get('src') }
-            id     = { this.props.data.get('id') }
-            key    = { this.props.data.get('id') }
+            playlist = { this.props.playlist }
+            key = { this.props.id }
           />
   }
 }
 
 function mapStateToProps(state, props) {
   // console.log(props.id, 'media container')
+  // console.log(state.getIn(['data','myPlaylists', 'entities', 'myplaylists', props.id]),'prueba')
   return {
-    data: state.getIn(['data', 'entities', 'media', props.id])
+    playlist: state.getIn(['data','myPlaylists', 'entities', 'myplaylists', props.id])
   }
 }
 
@@ -40,4 +37,4 @@ function mapStateToProps(state, props) {
 //   }
 // }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MediaContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(PlaylistItemContainer)

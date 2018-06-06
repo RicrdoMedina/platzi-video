@@ -1,15 +1,15 @@
 import React from 'react'
-import PlaylistItem from './playlist-item'
+import PlaylistItemContainer from '../containers/playlist-item-container'
 
 const Playlist = (props) => {
   const { myplaylists, handleOpenModal } = props
   return (
     <ol className = "RelatedPlaylist">
       {
-        myplaylists.map( (playlist) => {
-          return <PlaylistItem
-                    { ...playlist }
-                    key = { playlist.id }
+        myplaylists.map( (playlistId) => {
+          return <PlaylistItemContainer
+                    id = { playlistId }
+                    key = { playlistId }
                     openModal = { handleOpenModal }
                   />
         })

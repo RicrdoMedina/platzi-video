@@ -1,6 +1,6 @@
 :root {
   --colorWhite: white;
-  --colorBlack:#151b31;
+  --colorBlack: #151b31;
   --colorCrimson: rgb( 232, 46, 89 );
   --colorDarkSlateBlue: rgb( 63, 81, 181 );
   --colorSlateGray: rgb( 116, 119, 132 );
@@ -9,12 +9,12 @@
   --fontSizeTitleSecondary: 14px;
 }
 
-@custom-media --mobile ( max-width: 500px );
+@custom-media --mobile ( max-width:500px );
 
-@custom-media --tablet ( max-width: 800px );
+@custom-media --tablet ( max-width:800px );
 
-@custom-media --desktop ( max-width: 1224px );
+@custom-media --desktop ( max-width:1224px );
 
-@custom-media --largeDesktop  (min-width: 1824px );
+@custom-media --largeDesktop (min-width:1824px );
 
-@custom-media --superiorTablet ( min-width : 800px );
+@custom-media --superiorTablet ( min-width:800px );
